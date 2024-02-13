@@ -1,33 +1,42 @@
 # CS-175L
 # Jonathan Veltri
-# Restaurant 
+# Restaurant 2
 
-print("")
-vegetarianInput = str.lower(input("Is anyone in your party vegetarian?: "))
-vegetarian = False
-if vegetarianInput == "yes":
-    vegetarian = True
+searchAgain = "yes"
+while searchAgain == "yes":
 
-veganInput = str.lower(input("Is anyone in your party vegan?: "))
-vegan = False
-if veganInput == "yes":
-    vegan = True
+    print("")
+    vegetarianInput = str.lower(input("Is anyone in your party vegetarian?: "))
+    vegetarian = False
+    if vegetarianInput == "yes":
+        vegetarian = True
 
-glutenFreeInput = str.lower(input("Is anyone in your party gluten-free?: "))
-glutenFree = False
-if glutenFreeInput == "yes":
-    glutenFree = True
+    veganInput = str.lower(input("Is anyone in your party vegan?: "))
+    vegan = False
+    if veganInput == "yes":
+        vegan = True
 
-print("")
-print("Here are your restaurant choices.")
+    glutenFreeInput = str.lower(input("Is anyone in your party gluten-free?: "))
+    glutenFree = False
+    if glutenFreeInput == "yes":
+        glutenFree = True
 
-if (vegetarian == False) and (vegan == False) and (glutenFree == False):
-    print("Joe's Gourmet Burgers")
-if (vegan == False) and (glutenFree == False):
-    print("Mama's Fine Italian")
-if vegan == False:
-    print("Main Street Pizza Company")
-print("Corner Cafe")
-print("The Chef's Kitchen")
+    print("")
+    print("Here are your restaurant choices.")
 
-print()
+    if (vegetarian == False) and (vegan == False) and (glutenFree == False):
+        print("Joe's Gourmet Burgers")
+    if (vegan == False) and (glutenFree == False):
+        print("Mama's Fine Italian")
+    if vegan == False:
+        print("Main Street Pizza Company")
+    print("Corner Cafe")
+    print("The Chef's Kitchen")
+    print()
+    searchAgain = str.lower(input("Would you like to search again?: "))
+    while searchAgain != "yes" and searchAgain != "no":
+        print("")
+        print("INVALID: PLEASE INPUT YES OR NO")
+        print("")
+        searchAgain = str.lower(input("Would you like to search again?: "))
+print("Goodbye.")
