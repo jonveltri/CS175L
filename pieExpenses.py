@@ -3,7 +3,6 @@
 # Expense Pie Chart
 
 import matplotlib.pyplot as plt
-import numpy as np
 
 def createPieChart(expenseAmounts, expenseNames):
     plt.pie(expenseAmounts, labels=expenseNames)
